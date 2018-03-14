@@ -1,0 +1,32 @@
+class Solution {
+public:
+    /**
+     * @param number: A 3-digit number.
+     * @return: Reversed number.
+     */
+    int reverseInteger(int number) {
+        // write your code here
+        int result = 0;
+        int reminder;
+        int negative = 0;
+        
+        if ( number < 0 )
+        {
+            number = -number;
+            negative = 1;
+        }
+        
+        while (number%10 >= 0 && number >0)
+        {
+            reminder = number%10;
+            result = result*10 + reminder;
+            number = (int)number/10;
+        }
+        if (negative==1)
+        {
+            result = -result;
+        }
+        return result;
+    }
+    
+};
