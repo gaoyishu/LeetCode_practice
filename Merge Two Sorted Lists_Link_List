@@ -1,4 +1,4 @@
-ListNode dummy(INT_MIN);
+        ListNode dummy(INT_MIN);
         ListNode *tail = &dummy;
         
         while (l1 && l2) {
