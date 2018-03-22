@@ -1,0 +1,10 @@
+public class Solution {
+    public int maxSubArray(int[] A) {
+        int curMax = A[0], preMax = A[0];
+        for (int i = 1; i < A.length; i++){
+            preMax = Math.max(preMax+A[i], A[i]);
+            curMax = Math.max(curMax, preMax);
+        }
+        return curMax;
+    }
+}
