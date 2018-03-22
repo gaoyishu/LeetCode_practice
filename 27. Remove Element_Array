@@ -1,10 +1,13 @@
-public int removeElement(int[] nums, int val) {
-    int i = 0;
-    for (int j = 0; j < nums.length; j++) {
-        if (nums[j] != val) {
-            nums[i] = nums[j];
-            i++;
+class Solution { 
+    public:
+        int removeElement(vector<int>& nums, int val) {
+            int index = 0;    //设置一个初始值，用来循环放数值的。
+            for (int i = 0; i < nums.size(); ++i) {  //另一个i用来顺序寻找数组中的值。
+                if (nums[i] != val) {  //如果nums数组中下标为i的值不等于val
+                    nums[index] = nums[i];
+                    index++;                //nums[index]存放nums[i]，并且index ++， 往后移一位。
+                }
+            }
+            return index;   //for循环结束，返回Index。
         }
-    }
-    return i;
-}
+    };
